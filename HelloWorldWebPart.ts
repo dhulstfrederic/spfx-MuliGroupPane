@@ -92,7 +92,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription
+            description: 'Page 1  '
           },
           groups: [
             {
@@ -113,8 +113,33 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
             }
           ],
           displayGroupsAsAccordion: true
-        }
+        },
+        {
+          header: {
+            description: 'Page 2'
+          },
+          groups: [
+            {
+              groupName: 'Group 1',
+              groupFields: [
+                PropertyPaneTextField('description', {
+                  label: 'Description 1'
+                })
+              ]
+            },
+            {
+              groupName: 'Group 2',
+              groupFields: [
+                PropertyPaneTextField('description2', {
+                  label: 'Description 2'
+                })
+              ]
+            }
+          ],
+          displayGroupsAsAccordion: true
+        }        
       ]
+      // array of pages ends
     };
   }
 }
